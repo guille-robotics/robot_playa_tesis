@@ -70,13 +70,16 @@ void loop() {
     x = x + 0.1*xp;
     y = y + 0.1*yp; 
       
-    // Enviar las posiciones y ángulo a través de la comunicación serial
-    Serial.print("X: ");
+    // Enviar las posiciones y ángulo a través de la comunicación serial en formato CSV
     Serial.print(x);
-    Serial.print(" Y: ");
+    Serial.print(",");
     Serial.print(y);
-    Serial.print(" Phi: ");
-    Serial.println(phi);
+    Serial.print(",");
+    Serial.print(phi);
+    Serial.print(",");
+    Serial.print(Umeas);
+    Serial.print(",");
+    Serial.println(Wmeas);
 
     lastTime = millis();
   }
